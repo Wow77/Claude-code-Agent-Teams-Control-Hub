@@ -34,9 +34,10 @@ let api = null
 if (await isPortInUse(apiPort)) {
   console.log(`[web-dev] API already running on port ${apiPort}, reusing it.`)
 } else {
-  api = spawn(process.execPath, ['scripts/web-api.mjs', '--dev'], {
+  api = spawn(`"${process.execPath}"`, ['scripts/web-api.mjs', '--dev'], {
     cwd: projectRoot,
     stdio: 'inherit',
+    shell: true,
   })
 }
 
@@ -45,7 +46,7 @@ const ui =
     ? spawn('npm.cmd', ['run', 'dev:ui'], {
         cwd: projectRoot,
         stdio: 'inherit',
-        shell: false,
+        shell: true,
       })
     : spawn('npm', ['run', 'dev:ui'], {
         cwd: projectRoot,

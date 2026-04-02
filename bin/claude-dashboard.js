@@ -21,7 +21,7 @@ const proc =
     ? spawn('npm.cmd', ['run', 'web:dev'], {
         cwd: dashboardDir,
         stdio: 'inherit',
-        shell: false,
+        shell: true,
       })
     : spawn('npm', ['run', 'web:dev'], {
         cwd: dashboardDir,

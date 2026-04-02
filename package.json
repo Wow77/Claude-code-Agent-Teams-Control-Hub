@@ -1,5 +1,5 @@
 {
-  "name": "claude-team-dashboard",
+  "name": "claude-dashboard-hub",
   "version": "1.3.0",
   "description": "Real-time monitoring dashboard for Claude Code Agent Teams",
   "type": "module",

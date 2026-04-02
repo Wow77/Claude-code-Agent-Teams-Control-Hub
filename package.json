@@ -1,0 +1,56 @@
+{
+  "name": "claude-team-dashboard",
+  "version": "1.0.0",
+  "description": "Real-time monitoring dashboard for Claude Code Agent Teams",
+  "type": "module",
+  "bin": {
+    "claude-dashboard": "./bin/claude-dashboard.js"
+  },
+  "scripts": {
+    "dev": "node scripts/web-dev.mjs",
+    "dev:ui": "vite",
+    "build": "tsc && vite build",
+    "web:api": "node scripts/web-api.mjs --dev",
+    "web:dev": "node scripts/web-dev.mjs",
+    "web:start": "node scripts/web-api.mjs",
+    "preview": "vite preview",
+    "lint": "eslint . --ext ts,tsx"
+  },
+  "keywords": [
+    "claude-code",
+    "agent-team",
+    "monitoring",
+    "dashboard"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "@radix-ui/react-select": "^2.0.0",
+    "@radix-ui/react-tabs": "^1.0.4",
+    "@radix-ui/react-tooltip": "^1.0.7",
+    "chokidar": "^3.5.3",
+    "classcat": "^5.0.5",
+    "clsx": "^2.0.0",
+    "d3-selection": "^3.0.0",
+    "date-fns": "^3.0.6",
+    "lucide-react": "^0.294.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "reactflow": "^11.10.1",
+    "recharts": "^2.10.3",
+    "tailwind-merge": "^2.2.0",
+    "zustand": "^4.4.7"
+  }
+}

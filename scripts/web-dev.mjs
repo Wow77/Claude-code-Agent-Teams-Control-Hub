@@ -42,9 +42,10 @@ if (await isPortInUse(apiPort)) {
 
 const ui =
   process.platform === 'win32'
-    ? spawn('cmd.exe', ['/d', '/s', '/c', 'npm run dev:ui'], {
+    ? spawn('npm.cmd', ['run', 'dev:ui'], {
         cwd: projectRoot,
         stdio: 'inherit',
+        shell: false,
       })
     : spawn('npm', ['run', 'dev:ui'], {
         cwd: projectRoot,

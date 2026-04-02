@@ -18,9 +18,10 @@ console.log('[claude-dashboard] starting web dashboard...')
 
 const proc =
   process.platform === 'win32'
-    ? spawn('cmd.exe', ['/d', '/s', '/c', 'npm run web:dev'], {
+    ? spawn('npm.cmd', ['run', 'web:dev'], {
         cwd: dashboardDir,
         stdio: 'inherit',
+        shell: false,
       })
     : spawn('npm', ['run', 'web:dev'], {
         cwd: dashboardDir,

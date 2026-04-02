@@ -10,6 +10,7 @@
     "dev": "node scripts/web-dev.mjs",
     "dev:ui": "vite",
     "build": "tsc && vite build",
+    "prepare": "npm run build",
     "web:api": "node scripts/web-api.mjs --dev",
     "web:dev": "node scripts/web-dev.mjs",
     "web:start": "node scripts/web-api.mjs",

@@ -4,22 +4,46 @@ Real-time visual dashboard for Claude Code teams.
 
 ## Install (Anywhere)
 
-### Global install (recommended)
+### From GitHub (latest)
+
+1. **Clone the repository**
 
 ```bash
-npm i -g claude-team-dashboard
+git clone https://github.com/Wow77/Claude-code-Agent-Teams-Control-Hub.git
+cd Claude-code-Agent-Teams-Control-Hub
 ```
 
-Then run from any folder:
+2. **Install dependencies and build**
+
+```bash
+npm install
+```
+
+This will automatically run `npm run build` via the `prepare` script.
+
+3. **Create global link**
+
+```bash
+npm link
+```
+
+4. **Run from any folder**
 
 ```bash
 claude-dashboard
 ```
 
-Optional:
+Optional with team hint:
 
 ```bash
 claude-dashboard --team=my-team
+```
+
+### From npm (stable)
+
+```bash
+npm i -g claude-team-dashboard
+claude-dashboard
 ```
 
 ### No install (quick trial)
